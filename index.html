@@ -5,23 +5,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Zhanting Zhou — Home</title>
   <style>
-    :root{--max:900px;--accent:#0b66c3;--muted:#666;}
+    :root{--max:980px;--accent:#0b66c3;--muted:#666;}
     body{font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      color:#111;background:#fff;margin:0;padding:36px;
-      display:flex;justify-content:center}
+      color:#111;background:#fff;margin:0;padding:40px;display:flex;justify-content:center}
     .wrap{max-width:var(--max);width:100%}
     header{display:flex;align-items:center;gap:18px}
     .avatar{
-      width:92px;height:92px;border-radius:8px;background:#eee;
-      display:inline-flex;align-items:center;justify-content:center;color:#999;font-weight:600}
-    h1{margin:0;font-size:28px}
-    p.lead{margin:6px 0 18px;color:var(--muted)}
-    section{margin-top:22px}
+      width:100px;height:100px;border-radius:8px;background:#f3f6fb;
+      display:inline-flex;align-items:center;justify-content:center;color:#0b66c3;font-weight:700;font-size:22px}
+    h1{margin:0;font-size:30px}
+    p.lead{margin:6px 0 12px;color:var(--muted)}
     .meta{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px}
-    .box{padding:18px;border:1px solid #f0f0f0;border-radius:8px;margin-top:12px}
+    .box{padding:18px;border:1px solid #f0f0f0;border-radius:8px;margin-top:14px}
     a{color:var(--accent);text-decoration:none}
-    footer{margin-top:28px;color:var(--muted);font-size:13px}
-    @media(max-width:520px){header{flex-direction:column;align-items:flex-start}.avatar{width:72px;height:72px}}
+    dl{margin:0}
+    dt{font-weight:600;margin-top:10px}
+    dd{margin:0 0 8px 0;color:var(--muted)}
+    .pub-list{margin:0;padding-left:18px}
+    footer{margin-top:22px;color:var(--muted);font-size:13px}
+    @media(max-width:640px){header{flex-direction:column;align-items:flex-start}.avatar{width:76px;height:76px}}
   </style>
 </head>
 <body>
@@ -30,28 +32,52 @@
       <div class="avatar">ZZ</div>
       <div>
         <h1>Zhanting Zhou</h1>
-        <p class="lead">Research: Federated Learning · Graph Learning · Machine Unlearning · Vision-Language Models</p>
+        <p class="lead">Postgraduate, Network and Data Security Lab, School of Software Engineering, UESTC</p>
         <div class="meta">
-          <div>School of Software Engineering, UESTC</div>
+          <div>Research: Federated Learning · Graph Learning · Machine Unlearning · Vision-Language Models</div>
           <div>Email: <a href="mailto:ztzhou@std.uestc.edu.cn">ztzhou@std.uestc.edu.cn</a></div>
+          <div><a href="https://scholar.google.com/citations?user=LtdoCOYAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Google Scholar profile</a></div>
         </div>
       </div>
     </header>
 
     <section class="box">
-      <h2>Selected Research Interests</h2>
-      <p>Privacy-preserving distributed learning. Federated unlearning and backdoor removal. Multimodal representation and robustness. Quantization for vision-language models.</p>
+      <h2>Profile summary</h2>
+      <p>Master candidate at University of Electronic Science and Technology of China. Focus on privacy-preserving distributed learning, federated unlearning, graph neural networks, and efficient inference for vision-language models on mobile devices. Current work includes federated domain unlearning and practical evaluation of gradient inversion attacks.</p>
     </section>
 
     <section class="box">
-      <h2>Quick Links</h2>
-      <p><a href="#">Publications</a> · <a href="#">Projects</a> · <a href="#">CV</a></p>
-      <p style="color:var(--muted);font-size:14px;margin-top:8px">If you want a full academic page with publication auto-generation, I can provide a ready Jekyll template based on AcademicPages.</p>
+      <h2>Education</h2>
+      <dl>
+        <dt>University of Electronic Science and Technology of China</dt>
+        <dd>Master of Science in Software Engineering (2023 — 2026), GPA 3.59/4.00</dd>
+        <dt>Xinan Minzu University</dt>
+        <dd>Bachelor of Science in Communication Engineering (2019 — 2023)</dd>
+      </dl>
+    </section>
+
+    <section class="box">
+      <h2>Selected publications</h2>
+      <p style="color:var(--muted)">Below are representative items extracted from the CV I received. Full list on Google Scholar. :contentReference[oaicite:8]{index=8}</p>
+      <ol class="pub-list">
+        <li>Z. Zhou et al., HKTGNN: Hierarchical Knowledge Transferable Graph Neural Network-based Supply Chain Risk Assessment, ISPA 2023. (Conference publication)</li>
+        <li>Submitted works (selected): FedIA: Importance-Aware Aggregation for Domain-Robust Federated Graph Learning (AAAI 2026 submission); SURGE4MR: Diagnosis-driven hierarchical gradient surgery for multimodal recommendation unlearning (WWW 2026 submission)</li>
+        <li>Other in-progress items and collaborations on federated unlearning, gradient inversion analysis, and VLM mobile inference (see CV and Google Scholar for details)</li>
+      </ol>
+    </section>
+
+    <section class="box">
+      <h2>Current projects & interests</h2>
+      <p>Federated domain unlearning, multimodal recommendation unlearning (SURGE4MR), gradient inversion and privacy evaluation (MAGIA), quantization and inference acceleration for VLMs on mobile devices. I aim to combine principled diagnostics with practical, deployable interventions.</p>
+    </section>
+
+    <section class="box">
+      <h2>Links</h2>
+      <p><a href="https://github.com/ztzhou" target="_blank" rel="noopener">GitHub</a> · <a href="mailto:ztzhou@std.uestc.edu.cn">Email</a> · <a href="https://scholar.google.com/citations?user=LtdoCOYAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Google Scholar</a></p>
     </section>
 
     <footer>
-      <div>Last updated: <span id="updated">—</span></div>
-      <script>document.getElementById('updated').textContent = new Date().toLocaleDateString();</script>
+      <div>Note: publications and details were taken from the CV you uploaded. If you want automatic publication lists (BibTeX → site) consider migrating to AcademicPages or a Jekyll theme that supports BibTeX import (I can provide starter files). :contentReference[oaicite:9]{index=9}</div>
     </footer>
   </main>
 </body>
