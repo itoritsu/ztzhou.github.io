@@ -1,15 +1,58 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Zhanting Zhou - Home</title>
-  <style>body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;max-width:760px;margin:30px auto;padding:0 16px;}</style>
+  <title>Zhanting Zhou — Home</title>
+  <style>
+    :root{--max:900px;--accent:#0b66c3;--muted:#666;}
+    body{font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color:#111;background:#fff;margin:0;padding:36px;
+      display:flex;justify-content:center}
+    .wrap{max-width:var(--max);width:100%}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{
+      width:92px;height:92px;border-radius:8px;background:#eee;
+      display:inline-flex;align-items:center;justify-content:center;color:#999;font-weight:600}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0 18px;color:var(--muted)}
+    section{margin-top:22px}
+    .meta{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+    .box{padding:18px;border:1px solid #f0f0f0;border-radius:8px;margin-top:12px}
+    a{color:var(--accent);text-decoration:none}
+    footer{margin-top:28px;color:var(--muted);font-size:13px}
+    @media(max-width:520px){header{flex-direction:column;align-items:flex-start}.avatar{width:72px;height:72px}}
+  </style>
 </head>
 <body>
-  <h1>Zhanting Zhou</h1>
-  <p>Research Interests: Federated Learning, Graph Learning, Machine Unlearning, Vision Language Model.</p>
-  <p>Scope: Data Governance, Privacy, AI Efficiency.</p>
-  <p>Email: ztzhou@std.uestc.edu.cn</p>
+  <main class="wrap">
+    <header>
+      <div class="avatar">ZZ</div>
+      <div>
+        <h1>Zhanting Zhou</h1>
+        <p class="lead">Research: Federated Learning · Graph Learning · Machine Unlearning · Vision-Language Models</p>
+        <div class="meta">
+          <div>School of Software Engineering, UESTC</div>
+          <div>Email: <a href="mailto:ztzhou@std.uestc.edu.cn">ztzhou@std.uestc.edu.cn</a></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="box">
+      <h2>Selected Research Interests</h2>
+      <p>Privacy-preserving distributed learning. Federated unlearning and backdoor removal. Multimodal representation and robustness. Quantization for vision-language models.</p>
+    </section>
+
+    <section class="box">
+      <h2>Quick Links</h2>
+      <p><a href="#">Publications</a> · <a href="#">Projects</a> · <a href="#">CV</a></p>
+      <p style="color:var(--muted);font-size:14px;margin-top:8px">If you want a full academic page with publication auto-generation, I can provide a ready Jekyll template based on AcademicPages.</p>
+    </section>
+
+    <footer>
+      <div>Last updated: <span id="updated">—</span></div>
+      <script>document.getElementById('updated').textContent = new Date().toLocaleDateString();</script>
+    </footer>
+  </main>
 </body>
 </html>
